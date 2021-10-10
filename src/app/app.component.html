@@ -17,4 +17,62 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payment Date</label>
+      <input
+      type="date"
+    [value]="date"
+        #userInput
+        class="form-control"
+        (input)="onDateChange(userInput.value)"
+
+      />
+    </div>
+    <div class="col">
+      <label for=""><b>Payment Date</b></label>
+      <div>
+        {{ date  |  date: "medium" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payment Amount</label>
+      <input
+
+        #userInput
+        class="form-control"
+        (input)="onAmountChange(userInput.value)"
+[value]="amount"
+      />
+    </div>
+    <div class="col">
+      <label for=""><b>Payment Amount</b></label>
+      <div>
+        {{ amount }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Miles</label>
+      <input
+
+        #userInput
+        class="form-control"
+        (input)="onMilesChange(userInput.value)"
+[value]="amount"
+      />
+    </div>
+    <div class="col">
+      <label for=""><b>Kilometers</b></label>
+      <div>
+        {{ miles | convert }}
+      </div>
+    </div>
+  </div>
+  <!-- {{car |json}} -->
 </div>
